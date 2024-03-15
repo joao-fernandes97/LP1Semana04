@@ -16,9 +16,15 @@ namespace BetterDecorator
         /// - a number</param>
         static void Main(string[] args)
         {
-            char dec = char.Parse(args[1]);
-            int n = int.Parse(args[2]);
-            Console.WriteLine(Decor(args[0], dec, n));
+            if(args.Length==0)
+            {
+                Console.WriteLine(Decor());
+            }else{
+                char dec = char.Parse(args[1]);
+                int n = int.Parse(args[2]);
+                Console.WriteLine(Decor(args[0], dec, n));
+            }
+            
             
         }
 
@@ -45,6 +51,11 @@ namespace BetterDecorator
             }
 
             return sen;
+        }
+
+        private static string Decor()
+        {
+            return Decor("User did not specify args!", '=', 3);
         }
     }
 }
