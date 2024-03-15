@@ -53,6 +53,11 @@ namespace BetterDecorator
             return sen;
         }
 
+        /// <summary>
+        /// Decor method without parameters, calls Decor method
+        /// with specified parameters
+        /// </summary>
+        /// <returns>Built sentence using the specified parameters</returns>
         private static string Decor()
         {
             return Decor("User did not specify args!", '=', 3);
