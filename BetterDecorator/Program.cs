@@ -4,6 +4,16 @@ namespace BetterDecorator
 {
     class Program
     {
+        /// <summary>
+        /// Receives command line arguments, parses them
+        /// to the correct format and calls the Decor
+        /// method with them
+        /// </summary>
+        /// <param name="args">command line arguments,
+        /// expects 3 of them in order:
+        /// - a sentence
+        /// - a single character
+        /// - a number</param>
         static void Main(string[] args)
         {
             char dec = char.Parse(args[1]);
@@ -12,6 +22,15 @@ namespace BetterDecorator
             
         }
 
+        /// <summary>
+        /// Receives 3 parameters and builds a sentence with
+        /// them
+        /// </summary>
+        /// <param name="s">center portion of the sentence</param>
+        /// <param name="dec">decorator character</param>
+        /// <param name="n">how many times that character is repeated on 
+        /// each side</param>
+        /// <returns>the new adorned sentence</returns>
         private static string Decor(string s, char dec, int n)
         {
             string sen = "";
